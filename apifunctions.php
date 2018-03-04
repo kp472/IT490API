@@ -25,6 +25,20 @@ function search($uid){
   echo $data;
   return $data;
 }
+function doctorPractices($practices,$location,$limit){
+
+  ini_set("allow_url_fopen", 1);
+  //$uid = $_GET['uid'];
+  $url = "https://api.betterdoctor.com/2016-03-01/practices?name=$practices&location=$location&skip=0&limit=$limit&user_key=d6fb865f0d167679bbe87e722ea09bdc";
+  //echo $url;
+  //echo $json;
+  $data = file_get_contents($url);
+  echo $data;
+  return $data;
+}
+
+
+
 
 function requestProcessor($request)
 {
@@ -43,7 +57,10 @@ function requestProcessor($request)
     case "location":
       return searchLocation($request['location']);
     case "search":
-      return search($request['uid'])
+      return search($request['uid']);
+    case "practices":
+      return doctorPractices($request['practices'],$request['location'],$request['limit']);
+
   }
   return array("returnCode" => '0', 'message'=>"Server received request and processed");
 }
