@@ -35,3 +35,7 @@ $server = new rabbitMQServer("testRabbitMQ.ini","testServer");
 $server->process_requests('requestProcessor');
 exit();
 ?>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 317f86f6b05959445308342d255c84d84fe2cbdf

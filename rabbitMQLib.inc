@@ -129,7 +129,11 @@ class rabbitMQServer
 		}
 		catch (Exception $e)
 		{
+<<<<<<< HEAD
 			trigger_error("Failed to start request processor: ".$e,E_USER_ERROR);
+=======
+			trigger_error("Failed to start request processor: ".$e,E_USER_ERROR); 
+>>>>>>> 317f86f6b05959445308342d255c84d84fe2cbdf
 		}
 	}
 }
@@ -269,3 +273,7 @@ class rabbitMQClient
 	}
 }
 ?>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 317f86f6b05959445308342d255c84d84fe2cbdf

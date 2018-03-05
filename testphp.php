@@ -13,7 +13,11 @@ function thaFunc($word, array $arrr = NULL)
   if ($arrr === NULL)
   {
     echo __FILE__.":".__LINE__.": NULL ARRAY".PHP_EOL;
+<<<<<<< HEAD
     return NULL;
+=======
+    return NULL; 
+>>>>>>> 317f86f6b05959445308342d255c84d84fe2cbdf
   }
   $return = "";
   foreach ($arrr as $ar)
