@@ -129,11 +129,10 @@ class rabbitMQServer
 		}
 		catch (Exception $e)
 		{
-<<<<<<< HEAD
+
 			trigger_error("Failed to start request processor: ".$e,E_USER_ERROR);
-=======
-			trigger_error("Failed to start request processor: ".$e,E_USER_ERROR); 
->>>>>>> 317f86f6b05959445308342d255c84d84fe2cbdf
+
+			trigger_error("Failed to start request processor: ".$e,E_USER_ERROR);
 		}
 	}
 }
@@ -266,14 +265,10 @@ class rabbitMQClient
 			$this->conn_queue->bind($exchange->getName(),$this->routing_key);
 			return $exchange->publish($json_message,$this->routing_key);
 		}
-		catch(Exception $e)
+	 catch(Exception $e)
 		{
 			die("failed to send message to exchange: ". $e->getMessage()."\n");
 		}
 	}
 }
 ?>
-<<<<<<< HEAD
-=======
-
->>>>>>> 317f86f6b05959445308342d255c84d84fe2cbdf
